@@ -34,9 +34,9 @@ args parse_args(int const argc, char const * const * const argv)
 			else
 			{
 				curr.remove_prefix(1);
-				for (char const i : curr)
+				for (auto const j : curr)
 				{
-					args.flags[i] = true;
+					args.flags[static_cast<std::size_t>(j)] = true;
 				}
 			}
 		}
